@@ -5,7 +5,7 @@
     "postinstall": "genenv -o ./.genenv/index.ts -e KNOWLEDGIANI_TELEGRAM_BOT_TOKEN",
     "check:type": "tsc --noEmit",
     "check:bplint": "bp lint",
-    "build": "bp add -y && bp build"
+    "build": "node api.js && bp add -y && bp build"
   },
   "dependencies": {
     "@botpress/cli": "workspace:*",

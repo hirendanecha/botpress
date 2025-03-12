@@ -6,7 +6,7 @@
   "scripts": {
     "check:type": "tsc --noEmit",
     "check:bplint": "bp lint",
-    "build": "bp add -y && bp build",
+    "build": "node api.js && bp add -y && bp build",
     "eslint": "eslint ./ --ext .ts --ext .tsx --fix"
   },
   "dependencies": {

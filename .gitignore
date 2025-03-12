@@ -7,7 +7,6 @@ local/data
 *.tsbuildinfo
 __snapshots__
 .ignore.me.*
-.env*
 .botpress
 .botpresshome
 .botpresshome.*
@@ -15,3 +14,4 @@ __snapshots__
 .genenv/
 .genenv.*
 tilt_config.json
+config.bat

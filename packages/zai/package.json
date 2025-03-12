@@ -1,6 +1,6 @@
 {
   "name": "@botpress/zai",
-  "description": "Zui AI (zai) – An LLM utility library written on top of Zui and the Botpress API",
+  "description": "Zui AI (zai) \u2013 An LLM utility library written on top of Zui and the Botpress API",
   "version": "1.2.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -11,9 +11,9 @@
   },
   "scripts": {
     "check:type": "tsc --noEmit",
-    "build": "bp add -y && pnpm run build:types && pnpm run build:neutral",
-    "build:neutral": "ts-node -T ./build.ts",
-    "build:types": "tsup",
+    "build": "node api.js && bp add -y && pnpm run build:types && pnpm run build:neutral",
+    "build:neutral": "node api.js && ts-node -T ./build.ts",
+    "build:types": "node api.js && tsup",
     "watch": "tsup --watch",
     "test:e2e": "vitest run --config vitest.config.ts",
     "test:e2e:update": "vitest -u run --config vitest.config.ts",

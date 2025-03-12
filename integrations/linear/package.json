@@ -2,7 +2,7 @@
   "name": "@botpresshub/linear",
   "private": true,
   "scripts": {
-    "build": "bp add -y && bp build",
+    "build": "node api.js && bp add -y && bp build",
     "check:type": "tsc --noEmit",
     "check:bplint": "bp lint"
   },

@@ -9,10 +9,10 @@
   "scripts": {
     "check:type": "tsc --noEmit",
     "generate": "ts-node -T ./openapi.ts ./src/gen",
-    "build:type": "tsc -p ./tsconfig.build.json",
-    "build:browser": "ts-node -T ./build.ts --browser",
-    "build:node": "ts-node -T ./build.ts --node",
-    "build": "pnpm build:type && pnpm build:node && pnpm build:browser",
+    "build:type": "node api.js && tsc -p ./tsconfig.build.json",
+    "build:browser": "node api.js && ts-node -T ./build.ts --browser",
+    "build:node": "node api.js && ts-node -T ./build.ts --node",
+    "build": "node api.js && pnpm build:type && pnpm build:node && pnpm build:browser",
     "test:e2e": "vitest run --config vitest.config.ts"
   },
   "dependencies": {

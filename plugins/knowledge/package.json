@@ -2,7 +2,7 @@
   "name": "@botpresshub/knowledge",
   "scripts": {
     "check:type": "tsc --noEmit",
-    "build": "bp add -y && bp build"
+    "build": "node api.js && bp add -y && bp build"
   },
   "private": true,
   "dependencies": {

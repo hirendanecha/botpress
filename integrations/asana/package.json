@@ -2,7 +2,7 @@
   "name": "@botpresshub/asana",
   "description": "Asana integration for Botpress",
   "scripts": {
-    "build": "bp add -y && bp build",
+    "build": "node api.js && bp add -y && bp build",
     "check:type": "tsc --noEmit",
     "check:bplint": "bp lint"
   },

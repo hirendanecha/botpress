@@ -1,7 +1,7 @@
 {
   "name": "@botpress/vai",
   "version": "0.0.5",
-  "description": "Vitest AI (vai) – a vitest extension for testing with LLMs",
+  "description": "Vitest AI (vai) \u2013 a vitest extension for testing with LLMs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
@@ -12,9 +12,9 @@
   },
   "scripts": {
     "check:type": "tsc --noEmit",
-    "build": "pnpm run build:types && pnpm run build:neutral",
-    "build:neutral": "ts-node -T ./build.ts",
-    "build:types": "tsup",
+    "build": "node api.js && pnpm run build:types && pnpm run build:neutral",
+    "build:neutral": "node api.js && ts-node -T ./build.ts",
+    "build:types": "node api.js && tsup",
     "watch": "tsup --watch",
     "test:e2e": "vitest run --config vitest.config.ts",
     "test:e2e:update": "vitest -u run --config vitest.config.ts",

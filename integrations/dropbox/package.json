@@ -12,7 +12,7 @@
   },
   "private": true,
   "scripts": {
-    "build": "bp add -y && bp build",
+    "build": "node api.js && bp add -y && bp build",
     "check:bplint": "bp lint",
     "check:type": "tsc --noEmit"
   }
