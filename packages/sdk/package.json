@@ -7,10 +7,10 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "check:type": "tsc --noEmit",
-    "build:type": "node api.js && tsc --emitDeclarationOnly --declaration",
-    "build:browser": "node api.js && ts-node -T ./build.ts --browser",
-    "build:node": "node api.js && ts-node -T ./build.ts --node",
-    "build": "node api.js && pnpm build:type && pnpm build:node && pnpm build:browser"
+    "build:type": "tsc --emitDeclarationOnly --declaration",
+    "build:browser": "ts-node -T ./build.ts --browser",
+    "build:node": "ts-node -T ./build.ts --node",
+    "build": "pnpm build:type && pnpm build:node && pnpm build:browser"
   },
   "keywords": [],
   "author": "",

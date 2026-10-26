@@ -8,9 +8,9 @@
   "license": "MIT",
   "scripts": {
     "check:type": "tsc --noEmit",
-    "build:type": "node api.js && tsup --tsconfig tsconfig.build.json ./src/index.ts --dts-resolve --dts-only --clean",
-    "build:neutral": "node api.js && ts-node -T ./build.ts --neutral",
-    "build": "node api.js && pnpm build:type && pnpm build:neutral && size-limit",
+    "build:type": "tsup --tsconfig tsconfig.build.json ./src/index.ts --dts-resolve --dts-only --clean",
+    "build:neutral": "ts-node -T ./build.ts --neutral",
+    "build": "pnpm build:type && pnpm build:neutral && size-limit",
     "test:e2e": "vitest run --dir ./e2e"
   },
   "size-limit": [

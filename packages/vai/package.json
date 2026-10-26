@@ -12,9 +12,9 @@
   },
   "scripts": {
     "check:type": "tsc --noEmit",
-    "build": "node api.js && pnpm run build:types && pnpm run build:neutral",
-    "build:neutral": "node api.js && ts-node -T ./build.ts",
-    "build:types": "node api.js && tsup",
+    "build": "pnpm run build:types && pnpm run build:neutral",
+    "build:neutral": "ts-node -T ./build.ts",
+    "build:types": "tsup",
     "watch": "tsup --watch",
     "test:e2e": "vitest run --config vitest.config.ts",
     "test:e2e:update": "vitest -u run --config vitest.config.ts",

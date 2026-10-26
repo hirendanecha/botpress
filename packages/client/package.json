@@ -13,11 +13,11 @@
   },
   "scripts": {
     "check:type": "tsc --noEmit",
-    "build:type": "node api.js && tsup --tsconfig tsconfig.build.json ./src/index.ts --dts-resolve --dts-only",
-    "build:browser": "node api.js && ts-node -T ./build.ts --browser",
-    "build:node": "node api.js && ts-node -T ./build.ts --node",
-    "build:bundle": "node api.js && ts-node -T ./build.ts --bundle",
-    "build": "node api.js && pnpm build:type && pnpm build:node && pnpm build:browser && pnpm build:bundle",
+    "build:type": "tsup --tsconfig tsconfig.build.json ./src/index.ts --dts-resolve --dts-only",
+    "build:browser": "ts-node -T ./build.ts --browser",
+    "build:node": "ts-node -T ./build.ts --node",
+    "build:bundle": "ts-node -T ./build.ts --bundle",
+    "build": "pnpm build:type && pnpm build:node && pnpm build:browser && pnpm build:bundle",
     "generate": "ts-node ./openapi.ts",
     "test:e2e": "ts-node -T ./e2e/node.ts"
   },
